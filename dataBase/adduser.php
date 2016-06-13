@@ -7,11 +7,11 @@
  */
 require_once "functions.php";
 
-$name = $_POST['name'];
+$name = $_GET['name'];
 if(!isset($name)) {
     die('no username');
 }
-$age = $_POST['age'];
+$age = $_GET['age'];
 if(!isset($age)) {
     die('no userage');
 }

@@ -22,7 +22,6 @@ require_once "configer.php";
         $conn = mysqli_connect(MYSQL_HOST,MYSQL_USERNAME,MYSQL_PW);
         if ($conn) {
 //                echo '连接数据库成功'."<br>";
-
             if(mysqli_select_db($conn,'myApp')){
                 $rel = mysqli_query($conn,"SELECT * FROM users ORDER BY id ASC ");
                 $dataCount= mysqli_num_rows($rel);
@@ -33,7 +32,7 @@ require_once "configer.php";
                     $name= $rel_arr['name'];
                     $age = $rel_arr['age'];
 
-                    echo "<tr><td>$id</td><td>$name</td><td>$age</td></tr>";
+                    echo "<tr><td>$id</td><td>$name</td><td>$age</td></tr><a href='edituser.php?id=$id'>修改</a> ";
                 }
 //                    echo $dataCount;
             }else {
@@ -49,7 +48,6 @@ require_once "configer.php";
         $conn = mysqli_connect(MYSQL_HOST,MYSQL_USERNAME,MYSQL_PW);
             mysqli_select_db($conn,'myApp');
             return $conn;
-
     }
     ?>
 </table>
