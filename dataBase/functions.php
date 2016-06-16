@@ -32,7 +32,7 @@ require_once "configer.php";
                     $name= $rel_arr['name'];
                     $age = $rel_arr['age'];
 
-                    echo "<tr><td>$id</td><td>$name</td><td>$age</td></tr><a href='edituser.php?id=$id'>修改</a> ";
+                    echo "<tr><td>$id</td><td>$name</td><td>$age</td></tr><a href='edituser.php?id=$id'>修改</a><a href='delateuser.php?id=$id'>删除</a> ";
                 }
 //                    echo $dataCount;
             }else {
